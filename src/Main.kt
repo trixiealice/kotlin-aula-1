@@ -1,6 +1,6 @@
 fun main() {
 
-val texto = "Bom dia, pessoal"
+    val texto = "Bom dia, pessoal"
 
     println(texto)
     println(texto.length)
@@ -40,7 +40,124 @@ val texto = "Bom dia, pessoal"
     val x: Int = 10
     val y: Double = x.toDouble() //Obrigatório
     // val z: Double = x - Não funciona
+
+    val a = 10
+    val b = 3
+
+    println(a + b)
+    println(a % b)
+    println(a / b)
+
+
+    fun soma (a: Int, b: Int): Int {
+        return a + b
+    }
+
+    val result = soma (10, 3)
+    println(result)
+    mandaSalve()
+    mensagemParabens(idade = 28, nome = "Joao")
+
+
+
+
+
+    val soma: (Int, Int) -> Int = {a, b -> a + b}
+    val result1 = soma(10, 3)
+
+    println(result1)
+
+
+    val idade2 = 18
+
+    if(idade2 >= 18) {
+        println("Maior de idade")
+    } else {
+        println("Menor de idade")
+    }
+
+
+    val nota = 7
+
+    if(nota >= 9){
+        println("Execelente")
+    } else if (nota >=6) {
+        print("Boa")
+    } else {
+        println("Reprovado")
+    }
+
+    val idade3 = 20
+    val status = if(idade3 >= 18) {
+        "Maior"
+        println("Teste4")
+        println(false)
+    } else {
+        "Menor"
+    }
+
+    println(status)
+
+
+    val dia = 3
+    val  nomedia = when (dia) {
+        1 -> println("Domingo")
+        2 -> println("Segunda")
+        3 -> println("Terça")
+        else -> println("Dia inválido")
+    }
+
+    val nota1 = 9
+
+    when (nota) {
+        9, 10 -> println("Excelente")
+        7, 8 -> println("bom")
+        6 -> println("Regular")
+        else -> println("reprovado")
+    }
+
+
+    var nome: String? = "joao"
+    nome = null
+
+    if(nome != null) {
+        println(nome?.length)
+    }
+
+    var numeros = arrayOf(1, 2, 2)
+
+    println(numeros[0])
+     numeros[1] = 50
+    println(numeros[1])
+
+    var frutas = listOf("Banana", "Maça", "Maça")
+
+    println(frutas[0])
+    frutas.add("Limão")
+    frutas.remove(2)
+
+    println(frutas.size)
+    printLn(frutas.first())
+    println(frutas.last())
+    println(frutas.contains("Maçã"))
 }
+
+
+//fun mandaSalve(nome:String) {
+//    println("Salve $nome!")
+//};
+
+
+fun mandaSalve(nome: String = "mano") {
+    println("Salve $nome!")
+
+};
+
+fun mensagemParabens(nome: String, idade: Int) {
+    println("Parabéns $nome pelos $idade anos de vida!")
+
+};
+
 
 
 
@@ -52,6 +169,31 @@ var - o valor pode ser alterado
 val - o valor não pode ser alterado (equivalente a const)
 
 em nenhum dos casos pode ser redeclarado
+
+ == igual
+ != diferente
+ > maior
+ < menor
+
+ Operadores atribuição
+
+ += - valor atual mais valor novo
+ -= - valor atual menos valor novo
+ *= - valor atual da multiplicado pelo novo valor
+ /= - vallor atualdivididopelo novo valor
+ %= = resto da divisão do valor atual pelo novo valor
+
+
+    fun main () {
+    nomeDaFuncao()
+    }
+
+    fun nomeDaFuncao () {
+    println ("Oi")
+    }
+
+    funções com parametros
+
 
 */
 
