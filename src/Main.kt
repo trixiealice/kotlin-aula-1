@@ -7,9 +7,9 @@ fun main() {
     println(texto.uppercase())
     println(texto.contains(other = "pessoal"))
 
-    val nome: String = "Alice"
+    //val nome: String = "Alice"
     val idade = 19
-    println("Bom dia $nome! logo logo vocë fará ${idade + 1} anos!!")
+    //println("Bom dia $nome! logo logo vocë fará ${idade + 1} anos!!")
 
     val textoDois = """
         Texto escrito
@@ -131,16 +131,117 @@ fun main() {
     println(numeros[1])
 
     var frutas = listOf("Banana", "Maça", "Maça")
-
     println(frutas[0])
-    frutas.add("Limão")
-    frutas.remove(2)
+    //frutas.add("Limão")
+    //frutas.remove(2)
 
     println(frutas.size)
-    printLn(frutas.first())
+    //printLn(frutas.first())
     println(frutas.last())
     println(frutas.contains("Maçã"))
+
+    //Lista são imutáveis (listOf).
+    //para criar uma lista mutável, se utiliza mutableListOf
+
+    var carros = mutableListOf("Corsa", "Celta")
+    println(carros.size)
+    println(carros.last())
+    println(carros.add("Fusca"))
+    println(carros.last())
+
+
+
+    //Set comum (imutável)
+    //Para ser mutável utilizar mutableSetOf
+    //Não permite repetição
+    //Não garante ordem de inserção
+    //Acesso ao valor por metodo
+    //Não permite alteração
+    val cores = mutableSetOf("Azul", "Verde", "Azul")
+    println(cores)
+    cores.add("Amarelo") //não funciona no comum
+    cores.remove("Verde") // não funciona no comum
+
+    println("---------------------------------")
+
+    //Map (imutavel)
+    val pessoas = mapOf(
+        "João" to 25,
+        "Maria" to 26
+    )
+
+    println(pessoas["João"])
+    // println(pessoas["Pedro"])
+    // pessoas["Maria"] = 27
+
+    val produtos = mutableMapOf(
+        "pc" to "computador",
+        "cl" to "celular"
+    )
+
+    println(produtos["pc"])
+    produtos["ms"] = "mouse"
+    produtos.remove("pc")
+    println("produtos")
+
+    println("---------------------------------")
+
+    //estruturas de repetição - while
+    var i = 0 //serve como contador
+
+    while (i < 10) {
+        println(i)
+
+        i++
+    }
+
+
+    //Operadores de intervalo
+    // São operadores utilizados para gerar os "ranges"(intervalos)
+    1 .. 5 // 1 a 5
+    1 until 5 //1 a 4
+    5 downTo  1 // 5 a 1
+    1 .. 2 step  2 // 1, 3, 5, 7, 9
+
+    println("---------------------------------")
+
+    //estruturas de repetição - for
+    //Em kotlin, o for funciona como "ranges"
+
+    for (i in 1 ..5) {
+        println(i)
+    }
+
+    println("---------------------------------")
+
+    val carrosDois = listOf("Corsa", "celta", "fusca")
+    for (carro in carros) {
+        println(carro)
+    }
+    println("---------------------------------")
+    for (indice in carros.indices) {
+        println(indice)
+    } // imprime 0, 1, 2
+    println("---------------------------------")
+
+    //Fala a ordem que cada item está
+    for ( (indice, carro) in carros.withIndex()){
+        println("O $carro está na posição $indice")
+    }
+
+    println("---------------------------------")
+
+    val idade4 = 15
+    when (idade4) {
+        in 0..12 -> println("Criança")
+        in 12..17 -> println("Adolescente")
+        in 18..59 -> println("Adulto")
+        else -> println("Idoso")
+    }
 }
+
+
+
 
 
 //fun mandaSalve(nome:String) {
