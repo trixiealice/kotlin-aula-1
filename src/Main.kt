@@ -238,6 +238,8 @@ fun main() {
         in 18..59 -> println("Adulto")
         else -> println("Idoso")
     }
+
+
 }
 
 
@@ -258,7 +260,6 @@ fun mensagemParabens(nome: String, idade: Int) {
     println("Parabéns $nome pelos $idade anos de vida!")
 
 };
-
 
 
 
