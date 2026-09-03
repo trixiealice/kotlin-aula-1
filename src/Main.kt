@@ -1,5 +1,33 @@
-fun main() {
+import model.Carro
+import model.CarroTunado
 
+ fun main() {
+
+     println("---------------")
+
+     val carro = Carro()
+     val carroTunado = CarroTunado()
+
+     carro.modelo = "Fusca"
+     carro.ano = -3009
+
+     carroTunado.modelo = "silvia"
+     carroTunado.ano = 1999
+     carroTunado.ranking = 's'
+
+     carro.acelerar()
+     carroTunado.acelerar()
+
+     println(carro.modelo)
+     println(carro.ano)
+     println(carro.consultarKm())
+
+
+
+     println("---------------")
+
+
+ /*
     val texto = "Bom dia, pessoal"
 
     println(texto)
@@ -238,6 +266,8 @@ fun main() {
         in 18..59 -> println("Adulto")
         else -> println("Idoso")
     }
+
+*/
 
 
 }

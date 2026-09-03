@@ -36,5 +36,16 @@ fun main () {
     b()
 }
 
+fun c() {
+    val numeros = (1..5).toList()
+    val result = numeros
+        .filter { it % 2 == 0 }
+        .map { it * 2 }
+        .reduce {acc, n -> acc + n}
+    println(result)
+}
+
+
+
 
 //
